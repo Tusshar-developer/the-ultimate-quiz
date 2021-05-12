@@ -1,0 +1,66 @@
+@font-face {
+  font-family: P-Sans-Light;
+  src: url("/fonts/ProductSans-Light.ttf");
+}
+@font-face {
+  font-family: P-Sans;
+  src: url("/fonts/ProductSans-Regular.ttf");
+}
+@font-face {
+  font-family: P-Sans-Thin;
+  src: url("/fonts/ProductSans-Thin.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: P-Sans;
+  background: linear-gradient(to right, #de6262, #ffb88c);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-top: 2rem;
+  color: white;
+}
+
+.msg {
+  font-size: 10vw;
+  align-items: center;
+}
+
+.points {
+  font-weight: bolder;
+  align-items: center;
+}
+
+.try-again {
+  color: black;
+  background: white;
+  padding: 2rem 3rem;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-radius: 50rem;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  box-shadow: 0px 8px 10px 3px rgba(0, 0, 0, 0.1);
+  position: fixed;
+}
+
+.try-again:hover {
+  box-shadow: 0px 13px 10px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 900px) {
+  .try-again {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}

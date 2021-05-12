@@ -1,0 +1,125 @@
+@font-face {
+  font-family: P-Sans-Light;
+  src: url("/fonts/ProductSans-Light.ttf");
+}
+@font-face {
+  font-family: P-Sans;
+  src: url("/fonts/ProductSans-Regular.ttf");
+}
+@font-face {
+  font-family: P-Sans-Thin;
+  src: url("/fonts/ProductSans-Thin.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: P-Sans;
+  background: linear-gradient(to right, #de6262, #ffb88c);
+  text-align: center;
+  height: 100vh;
+  padding: 6rem 2rem 0 2rem;
+}
+@font-face {
+  font-family: P-Sans-Light;
+  src: url("/fonts/ProductSans-Light.ttf");
+}
+@font-face {
+  font-family: P-Sans;
+  src: url("/fonts/ProductSans-Regular.ttf");
+}
+@font-face {
+  font-family: P-Sans-Thin;
+  src: url("/fonts/ProductSans-Thin.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: P-Sans;
+  background: linear-gradient(to right, #de6262, #ffb88c);
+  text-align: center;
+  height: 100vh;
+  padding: 6rem 2rem 0 2rem;
+  color: white !important;
+}
+
+.question-num {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+.points-p {
+  font-size: 3rem;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+
+.question {
+  font-size: 2rem;
+  width: 50%;
+  margin: auto;
+}
+
+.question-details {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-top: 8rem;
+  position: relative;
+  bottom: 3rem;
+  margin-bottom: 3rem;
+}
+
+.buttons button.option {
+  border: none;
+  outline: none;
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 50rem;
+  margin: 1rem 0.5rem 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 0px 8px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button.option:hover {
+  box-shadow: 0px 13px 10px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+.buttons button.option:disabled {
+  cursor: not-allowed;
+}
+
+.buttons button.option.correct {
+  background: lightgreen;
+}
+
+.buttons button.option.incorrect {
+  background: rgb(255, 66, 66);
+  color: white;
+}
+
+@media (min-width: 800px) {
+  .buttons button.option {
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+  }
+}
