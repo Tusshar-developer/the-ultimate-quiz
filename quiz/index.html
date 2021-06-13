@@ -4,25 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question #1 - The Ultimate Quiz - Tusshar Luthra</title>
+    <title>The Ultimate Quiz - Question #1</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <span class="question-num"
-      >Question #<span class="questionNum">0</span></span
-    >
+    <h1 class="scoreArea"><span class="score">0</span> Points</h1>
 
-    <p class="points-p">Points: <span class="points">0</span></p>
+    <div class="questionNumDiv">
+      <h1 class="questionNumh1">
+        Question #<span class="questionNum">1</span>
+      </h1>
+    </div>
 
-    <span class="question">Loading...</span>
-    <br />
-    <span class="question-details"
-      >Category: <span class="category"></span><br />
-      Difficulty: <span class="difficulty"></span
-    ></span>
+    <div class="questionDiv">
+      <h2 class="question">Loading...</h2>
+    </div>
 
-    <div class="buttons"></div>
+    <div class="options">
+      <div class="row"></div>
+      <div class="row"></div>
+    </div>
+
+    <p class="correctAnswerNotice">
+      The correct answer was <span class="correctAnswer"></span>.
+    </p>
+
+    <button class="tryAgain" onclick="window.location.reload()">
+      Try Again
+    </button>
 
     <script src="script.js"></script>
   </body>

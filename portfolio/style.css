@@ -1,0 +1,150 @@
+@font-face {
+  font-family: Matiz;
+  src: url("/assets/fonts/Matiz.ttf");
+}
+@font-face {
+  font-family: UbuntuMono;
+  src: url("/assets/fonts/UbuntuMono-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  height: 16px;
+  overflow: visible;
+  width: 16px;
+}
+
+::-webkit-scrollbar-button {
+  height: 0px;
+  width: 0px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-style: solid;
+  border-color: transparent;
+  border-width: 4px;
+  background-color: #dadce0;
+  border-radius: 8px;
+  box-shadow: none;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9b9b9b;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: none;
+  margin: 0px 4px;
+  background-clip: padding-box;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  border-width: 0px 0px 0px 4px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: #1a1a1a;
+  overflow-y: hidden !important;
+}
+body .container {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: both mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden !important;
+  display: flex;
+}
+body .container section {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+  overflow-y: hidden !important;
+  position: relative;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+body .container section .title, body .container section .slideTitle {
+  font-family: Matiz, sans-serif;
+  letter-spacing: 1px;
+  font-size: clamp(1.5rem, 5vw, 10rem);
+  text-align: center;
+}
+body .container section .subtitle, body .container section .slideContent {
+  margin-top: 1rem;
+  font-size: clamp(0.9rem, 2vw, 9rem);
+  width: 80vw;
+  text-align: center;
+}
+body .container section .slideTitle {
+  position: absolute;
+  top: 3vw;
+}
+body .container section .slideContent {
+  font-size: 1rem;
+}
+body .container section .slidePics {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+body .container section .slideImg, body .container section .slideImgPortrait, body .container section .slideImgBig {
+  width: clamp(10rem, 20vw, 20rem);
+  border-radius: 12px;
+  margin-top: 2vh;
+  border: 1px solid black;
+  box-shadow: 0px 4px 4px black;
+}
+body .container section .slideImgBig {
+  width: clamp(2rem, 40vw, 40rem);
+}
+body .container section .slideImgPortrait {
+  width: clamp(2rem, 15vw, 30rem);
+}
+body .container section .scrollMsg {
+  position: absolute;
+  right: 50px;
+  bottom: 2rem;
+  font-weight: bolder;
+  display: inline-flex;
+  align-items: center;
+}
+body .container section .scrollMsg .arrowBody {
+  height: 4px;
+  width: clamp(50px, 4vw, 200px);
+  background: #fff;
+  margin-left: 10px;
+  border-radius: 2px;
+}
+body .container section .scrollMsg .triangle {
+  height: 16px;
+  width: 16px;
+  transform: rotate(30deg);
+  position: relative;
+  top: 1px;
+  right: 10px;
+}
+body .container section a {
+  color: orange;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

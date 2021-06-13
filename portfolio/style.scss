@@ -1,0 +1,168 @@
+@font-face {
+  font-family: Matiz;
+  src: url("/assets/fonts/Matiz.ttf");
+}
+
+@font-face {
+  font-family: UbuntuMono;
+  src: url("/assets/fonts/UbuntuMono-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  height: 16px;
+  overflow: visible;
+  width: 16px;
+}
+
+::-webkit-scrollbar-button {
+  height: 0px;
+  width: 0px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-style: solid;
+  border-color: transparent;
+  border-width: 4px;
+  background-color: rgb(218, 220, 224);
+  border-radius: 8px;
+  box-shadow: none;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(155, 155, 155);
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: none;
+  margin: 0px 4px;
+  background-clip: padding-box;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  border-width: 0px 0px 0px 4px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(0, 0%, 10%);
+  overflow-y: hidden !important;
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: both mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden !important;
+    display: flex;
+
+    section {
+      flex: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      scroll-snap-align: center;
+      overflow-y: hidden !important;
+      position: relative;
+      flex-direction: column;
+      background-color: hsl(0, 0%, 10%);
+      color: #fff;
+
+      .title {
+        font-family: Matiz, sans-serif;
+        letter-spacing: 1px;
+        font-size: clamp(1.5rem, 5vw, 10rem);
+        text-align: center;
+      }
+
+      .subtitle {
+        margin-top: 1rem;
+        font-size: clamp(0.9rem, 2vw, 9rem);
+        width: 80vw;
+        text-align: center;
+      }
+
+      .slideTitle {
+        @extend .title;
+        position: absolute;
+        top: 3vw;
+      }
+
+      .slideContent {
+        @extend .subtitle;
+        font-size: 1rem;
+      }
+
+      .slidePics {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80vw;
+        margin: 0 auto;
+        justify-content: space-around;
+      }
+
+      .slideImg {
+        width: clamp(10rem, 20vw, 20rem);
+        border-radius: 12px;
+        margin-top: 2vh;
+        border: 1px solid hsl(0, 0%, 0%);
+        box-shadow: 0px 4px 4px hsl(0, 0%, 0%);
+      }
+
+      .slideImgBig {
+        @extend .slideImg;
+        width: clamp(2rem, 40vw, 40rem);
+      }
+
+      .slideImgPortrait {
+        @extend .slideImg;
+        width: clamp(2rem, 15vw, 30rem);
+      }
+
+      .scrollMsg {
+        position: absolute;
+        right: 50px;
+        bottom: 2rem;
+        font-weight: bolder;
+        display: inline-flex;
+        align-items: center;
+
+        .arrowBody {
+          height: 4px;
+          width: clamp(50px, 4vw, 200px);
+          background: #fff;
+          margin-left: 10px;
+          border-radius: 2px;
+        }
+
+        .triangle {
+          height: 16px;
+          width: 16px;
+          transform: rotate(30deg);
+          position: relative;
+          top: 1px;
+          right: 10px;
+        }
+      }
+
+      a {
+        color: orange;
+        text-decoration: none;
+      }
+    }
+  }
+}
