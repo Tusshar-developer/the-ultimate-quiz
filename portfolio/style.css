@@ -1,12 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:900&display=swap");
 @font-face {
   font-family: Matiz;
   src: url("/assets/fonts/Matiz.ttf");
 }
-@font-face {
-  font-family: UbuntuMono;
-  src: url("/assets/fonts/UbuntuMono-Regular.ttf");
-}
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,7 +54,6 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "Montserrat", sans-serif;
-  background-color: #1a1a1a;
   overflow-y: hidden !important;
 }
 body .container {
@@ -65,6 +63,8 @@ body .container {
   overflow-x: scroll;
   overflow-y: hidden !important;
   display: flex;
+  background: #191919;
+  color: white;
 }
 body .container section {
   flex: none;
@@ -77,27 +77,77 @@ body .container section {
   overflow-y: hidden !important;
   position: relative;
   flex-direction: column;
-  background-color: #1a1a1a;
-  color: #fff;
 }
-body .container section .title, body .container section .slideTitle {
+body .container section.titleScreen {
+  display: flex;
+  flex-direction: row;
+}
+body .container section.titleScreen .half {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+body .container section.titleScreen .half:nth-child(1) {
+  background: #f3f3f3;
+  color: #000;
+  justify-content: flex-end;
+}
+body .container section.titleScreen .half:nth-child(1) .title {
+  padding: 20vh 5px 20vh 10vw;
+  border: 5px solid #191919;
+  border-right: none;
+}
+body .container section.titleScreen .half:nth-child(1) .title::before {
+  content: "The Ultimate Quiz";
+  text-transform: uppercase;
+  position: absolute;
+  top: 20vh;
+  right: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+body .container section.titleScreen .half:nth-child(2) {
+  background: #191919;
+  color: #fff;
+  justify-content: flex-start;
+  color: white;
+}
+body .container section.titleScreen .half:nth-child(2) .title {
+  padding: 20vh 10vw 20vh 5px;
+  border: 5px solid #f3f3f3;
+  border-left: none;
+}
+body .container section.titleScreen .half:nth-child(2) .title::after {
+  content: "Tusshar Luthra";
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 20vh;
+  left: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+body .container section.titleScreen .half .title {
+  text-transform: uppercase;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(3rem, 7vw, 10rem);
+  font-weight: bolder;
+}
+body .container section .slideTitle {
   font-family: Matiz, sans-serif;
   letter-spacing: 1px;
   font-size: clamp(1.5rem, 5vw, 10rem);
   text-align: center;
-}
-body .container section .subtitle, body .container section .slideContent {
-  margin-top: 1rem;
-  font-size: clamp(0.9rem, 2vw, 9rem);
-  width: 80vw;
-  text-align: center;
-}
-body .container section .slideTitle {
   position: absolute;
   top: 3vw;
 }
 body .container section .slideContent {
-  font-size: 1rem;
+  margin-top: 1rem;
+  font-size: clamp(0.9rem, 2vw, 9rem);
+  width: 80vw;
+  text-align: center;
+  font-size: 0.9rem;
 }
 body .container section .slidePics {
   display: flex;
@@ -110,8 +160,7 @@ body .container section .slideImg, body .container section .slideImgPortrait, bo
   width: clamp(10rem, 20vw, 20rem);
   border-radius: 12px;
   margin-top: 2vh;
-  border: 1px solid black;
-  box-shadow: 0px 4px 4px black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 body .container section .slideImgBig {
   width: clamp(2rem, 40vw, 40rem);
@@ -119,32 +168,30 @@ body .container section .slideImgBig {
 body .container section .slideImgPortrait {
   width: clamp(2rem, 15vw, 30rem);
 }
-body .container section .scrollMsg {
-  position: absolute;
-  right: 50px;
-  bottom: 2rem;
-  font-weight: bolder;
-  display: inline-flex;
-  align-items: center;
-}
-body .container section .scrollMsg .arrowBody {
-  height: 4px;
-  width: clamp(50px, 4vw, 200px);
-  background: #fff;
-  margin-left: 10px;
-  border-radius: 2px;
-}
-body .container section .scrollMsg .triangle {
-  height: 16px;
-  width: 16px;
-  transform: rotate(30deg);
-  position: relative;
-  top: 1px;
-  right: 10px;
-}
-body .container section a {
-  color: orange;
+body .container section .quizLink {
+  color: #61a3ff;
+  font-weight: 600;
   text-decoration: none;
+  position: relative;
+  border-bottom: 2px solid transparent;
+  transition: all 0.25s linear;
+  position: relative;
+}
+body .container section .quizLink:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #61a3ff;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transform-origin: left;
+  transform: scale(0);
+  transition: 0.25s linear;
+}
+body .container section .quizLink:hover:before {
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */
