@@ -134,6 +134,27 @@ body .container section.titleScreen .half .title {
   font-size: clamp(3rem, 7vw, 10rem);
   font-weight: bolder;
 }
+@media (max-width: 1055px) {
+  body .container section.titleScreen .half:nth-child(1) .title::before {
+    top: 30%;
+    right: 5px;
+    font-size: 0.9rem;
+  }
+  body .container section.titleScreen .half:nth-child(1) .title {
+    padding: 10vh 5px 10vh 5vw;
+  }
+  body .container section.titleScreen .half:nth-child(2) {
+    margin-right: 2.5vw;
+  }
+  body .container section.titleScreen .half:nth-child(2) .title::after {
+    bottom: 30%;
+    left: 5px;
+    font-size: 0.9rem;
+  }
+  body .container section.titleScreen .half:nth-child(2) .title {
+    padding: 10vh 5vw 10vh 5px;
+  }
+}
 body .container section .slideTitle {
   font-family: Matiz, sans-serif;
   letter-spacing: 1px;
